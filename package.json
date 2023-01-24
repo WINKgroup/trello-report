@@ -1,0 +1,45 @@
+{
+  "name": "@winkgroup/trello-report",
+  "version": "0.1.0",
+  "description": "module to generate reports",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prepare": "npm run build",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "postversion": "git push && git push --tags && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WINKgroup/trello-report.git"
+  },
+  "keywords": [],
+  "author": "winksrl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WINKgroup/trello-report/issues"
+  },
+  "homepage": "https://github.com/WINKgroup/trello-report#readme",
+  "dependencies": {
+    "@winkgroup/console-log": "^2.0.1",
+    "@winkgroup/env": "^1.4.2",
+    "@winkgroup/misc": "^2.0.0",
+    "clockify-ts": "^1.2108.13",
+    "lodash": "^4.17.21",
+    "write-excel-file": "^1.4.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.18",
+    "prettier": "^2.8.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
